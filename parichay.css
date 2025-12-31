@@ -1,0 +1,382 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f1f8e9;
+}
+
+/* ===== WADI SECTION ===== */
+.wadi-section{
+    background:#e5e7eb;
+    padding:60px 20px;
+}
+
+.wadi-section h2{
+    text-align:center;
+    font-size:28px;
+    margin-bottom:40px;
+    color:#1f2937;
+}
+
+.wadi-card{
+    background:#fff;
+    border-radius:14px;
+    padding:18px 22px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 10px 22px rgba(0,0,0,0.12);
+    transition:0.3s;
+}
+
+.wadi-card:hover i{
+    transform:scale(1.1);
+    transition:0.3s;
+}
+
+.wadi-card i{
+    font-size:28px;
+    color:#1f2f78;
+    background:#e0e7ff;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.wadi-card span{
+    font-size:18px;
+    font-weight:500;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .wadi-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:500px){
+    .wadi-grid{ grid-template-columns:1fr; }
+}
+/* GRID 3 columns */
+.wadi-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* LAST CARD CENTER */
+.wadi-card:last-child{
+    grid-column: 2 / 3;   /* middle column */
+}
+
+/* ====== PIK SECTION ====== */
+.pik-section{
+    background: linear-gradient(135deg,#f0fdf4,#dcfce7);
+    padding:70px 20px;
+    text-align:center;
+}
+
+.pik-section h2{
+    font-size:28px;
+    color:#14532d;
+    margin-bottom:45px;
+}
+
+/* grid */
+.pik-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+/* card */
+.pik-card{
+    background:#ffffff;
+    border-radius:18px;
+    padding:35px 20px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+    transition:0.4s ease;
+}
+
+/* hover */
+.pik-card:hover{
+    transform:translateY(-10px);
+}
+
+/* icon */
+.pik-card i{
+    font-size:48px;
+    color:#16a34a;
+    margin-bottom:15px;
+}
+
+/* text */
+.pik-card h3{
+    font-size:20px;
+    color:#166534;
+    font-weight:600;
+}
+
+
+/* last card center on new row */
+.pik-card:last-child{
+    grid-column: 1 / -1;   /* full row */
+    justify-self: center;   /* center horizontally */
+     width: 250px; 
+}
+.temple-section{
+    background: linear-gradient(135deg,#fff7ed,#fde68a);
+    padding:70px 20px;
+    text-align:center;
+}
+
+.temple-section h2{
+    font-size:32px;
+    color:#b45309;
+    margin-bottom:50px;
+}
+
+/* Grid */
+.temple-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr; /* single column for horizontal cards */
+    gap:30px;
+}
+
+/* Card */
+.temple-card{
+    background:#ffffff;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.4s ease;
+    display:flex; /* horizontal layout */
+    align-items:center;
+    gap:20px;
+    padding:20px;
+}
+
+.temple-card:hover{
+    transform:translateY(-8px);
+}
+
+/* Image */
+.temple-card img{
+    width:200px;
+    height:150px;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+/* Info */
+.temple-info h3{
+    font-size:20px;
+    color:#78350f;
+    margin-bottom:10px;
+}
+.temple-info p{
+    font-size:16px;
+    color:#92400e;
+    line-height:1.5;
+}
+
+/* Responsive: mobile */
+@media(max-width:768px){
+    .temple-card{
+        flex-direction:column; /* vertical on mobile */
+        text-align:center;
+    }
+    .temple-card img{
+        width:100%;
+        height:auto;
+    }
+}
+/* ===== GEO SECTION – DISTINCT & CLEAN ===== */
+.geo-section{
+    padding:60px 30px;
+    background:#eef7f1;
+    border-top:4px solid #166534;
+    border-bottom:4px solid #166534;
+}
+
+.geo-card{
+    max-width:750px;
+    background:#ffffff;
+    padding:35px 40px;
+    border-radius:10px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    position:relative;
+}
+
+/* Left green strip */
+.geo-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:6px;
+    height:100%;
+    background:#166534;
+    border-radius:10px 0 0 10px;
+}
+
+.geo-card h2{
+    font-size:26px;
+    color:#0f172a;
+    margin-bottom:6px;
+}
+
+.subtitle{
+    font-size:15px;
+    color:#475569;
+    margin-bottom:30px;
+}
+
+.geo-list{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.geo-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.geo-number{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:#166534;
+    color:#ffffff;
+    font-size:18px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.geo-text h3{
+    margin:0;
+    font-size:19px;
+    color:#064e3b;
+}
+
+.geo-text p{
+    margin-top:4px;
+    font-size:15px;
+    color:#334155;
+}
+
+.divider{
+    height:1px;
+    background:#cbd5e1;
+    margin-left:62px;
+}
+
+/* Mobile responsive */
+@media(max-width:600px){
+    .geo-card{
+        padding:25px;
+    }
+    .geo-item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+    .divider{
+        margin-left:0;
+    }
+}
+
+/* ===== VILLAGE INTRO SECTION ===== */
+
+
+/* subtle left border */
+
+.village-intro::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:6px;
+    height:100%;
+    background:linear-gradient(to bottom,#166534,#4ade80);
+    border-radius:16px 0 0 16px;
+}
+
+/* main heading */
+.village-intro h1{
+    text-align:center;
+    font-size:34px;
+    color:#14532d;
+    margin-bottom:35px;
+    letter-spacing:1px;
+}
+
+/* sub headings */
+.village-intro h3{
+    font-size:22px;
+    color:#166534;
+    margin:35px 0 15px;
+    position:relative;
+}
+
+
+
+/* paragraph */
+.village-intro p{
+    font-size:17px;
+    color:#1f2937;
+    text-align:justify;
+}
+
+/* hero image */
+.hero-img{
+    margin:40px 0;
+    text-align:center;
+}
+
+.hero-img img{
+    width:100%;
+    max-width:650px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* responsive */
+@media(max-width:768px){
+    .village-intro{
+        padding:10px 5px;
+    }
+    .village-intro h1{
+        font-size:28px;
+    }
+    .village-intro h3{
+        font-size:20px;
+    }
+    .village-intro p{
+        font-size:16px;
+    }
+}
+.village-intro{
+    max-width: 1200px;  /* आधी 900px होते, आता 1200px करून मोठा केला */
+    background:#ffffff;
+    padding:60px 70px;  /* आधी 50px 55px, आता जरा जास्त */
+    border-radius:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+    line-height:1.9;
+    position:relative;
+}
+
+.village-section{
+    background:#e5e7eb;
+    padding:80px 30px;  /* आधी 60px 20px, आता थोडं जास्त */
+}
